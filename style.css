@@ -1,0 +1,12 @@
+.todo-item-animated {
+    transition: all 0.5s;
+}
+  
+.list-animation-enter, .list-animation-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
+  
+.list-animation-leave-active {
+    position: absolute;
+}

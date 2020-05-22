@@ -28,9 +28,9 @@
 		
 		<div id="main-content">
 
-			<ul>
+			<transition-group tag="ul" name="list-animation">
 			
-                <li v-for="todo in todoItems" class="todo-item">
+                <li v-for="todo in todoItems" v-bind:key="todo.Id" class="todo-item todo-item-animated">
 
                     <label class="todo-check">
                       <input type="checkbox" v-model="todo.IsDone" v-on:click="move(todo)" />
@@ -43,7 +43,7 @@
                 
                   </li>
 			
-			</ul>
+			</transition-group>
 
 		</div>
 
